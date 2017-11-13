@@ -23,13 +23,6 @@ namespace ReplaceJakob
 
             HttpResponseMessage response;
 
-            // Request body. Posts a locally stored JPEG image.
-            /*
-            FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
-            BinaryReader binaryReader = new BinaryReader(fileStream);
-            byte[] imageBytes = binaryReader.ReadBytes((int)fileStream.Length);
-            */
-
             using (ByteArrayContent content = new ByteArrayContent(imageBytes))
             {
                 // This example uses content type "application/octet-stream".

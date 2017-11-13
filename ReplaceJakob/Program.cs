@@ -20,6 +20,7 @@ namespace ReplaceJakob
             }
 
             MagickReadSettings settings = new MagickReadSettings();
+
             // Settings the density to 300 dpi will create an image with a better quality
             settings.Density = new Density(300, 300);
 
@@ -51,12 +52,6 @@ namespace ReplaceJakob
                         {
                             File.Copy(fileName, Directories.BWPrints + Path.GetFileName(fileName));
                         }
-
-
-                        /*
-                        Directory.CreateDirectory(Directories.Images + Path.GetFileNameWithoutExtension(Path.GetFileName(fileName)));
-                        image.Write(Directories.Images + Path.GetFileNameWithoutExtension(Path.GetFileName(fileName)) + @"\" + i.ToString() + ".png");
-                        */
                     }
                 }
             }
